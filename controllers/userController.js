@@ -150,7 +150,7 @@ export const forgotPassword = catchAsyncError(async (req, res, next) => {
 
   const message = `Click on the link to reset your password. ${url}. If you have not requested then please ignore`;
 
-  //send token via token
+  //send token a token
   sendEmail(user.email, "Made by me reset password", message);
 
   res.status(200).json({
